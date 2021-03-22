@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <script>
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);}
+    </script>
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <meta name="author" content="Caleb Faulkner">
@@ -22,6 +26,12 @@
             <a class="right" href="#formBox">CONTACT</a>
         </ul>
     </nav>
+    <nav class="mobileNav">
+        <ul id="gridNav2">
+            <a href="index.html"><img id="logo" src="images/XLogo.png"></img></a>
+            <img class="ham" src="images/hamburger.svg"></img>
+        </ul>
+    </nav>
     <main>
         <div id="gridMain" class="copy">
             <h1>XQUISITE MARKETING</h1>
@@ -40,8 +50,8 @@
         </div>
         <div class="copy3">
             <h1>MARKETING STRATEGY</h1>
-            <p>We create and implement marketing strategies for small to midsize businesses to help them reach a specific target market that in turn will increase brand awareness, sales, and ultimately grow your business.</p>
-            <button class="button">SCHEDULE CONSULTATION</button>
+            <p>We create and implement marketing strategies for small to midsize businesses to help them reach a specific target market that in turn will increase brand awareness and sales, and ultimately grow your business.</p>
+            <a href="https://calendly.com/xquisitemarketing/consultation?month=2021-02" target="blank"><button class="button">SCHEDULE CONSULTATION</button></a>
         </div>
         <div class="stat2">
             <p class="statpadNumber2">65</p>
@@ -84,19 +94,20 @@
                         <div class="title">National Marketing Director</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>BIO and desc and stuff</p>
+                        <p>With over 10 years of experience in the marketing industry, I bring insightful knowledge and innovative solutions to the table. As the lead marketing strategist, my job is to provide a plan of action for your business.</p>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Caleb.jpg" class="cardImg"></img>
+                        <img src="Images/Kera.jpg" class="cardImg"></img>
                         <div class="name">Kera McCain</div>
-                        <div class="title">Cool Title</div>
+                        <div class="title">VP, Digital Marketing</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>BIO and desc and stuff</p>
+                        <p>I shape profitable business through online marketing, paid social, & strategic partnerships for our clients. 
+                        </p>
                     </div>
                 </div>
             </div>
@@ -115,12 +126,12 @@
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Caleb.jpg" class="cardImg"></img>
+                        <img src="Images/Terrell.jpg" class="cardImg"></img>
                         <div class="name">Terrell Anderson</div>
                         <div class="title">Senior Graphic Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>BIO and desc and stuff</p>
+                        <p>With over 15 years of graphic and web design experience, I have worked with Grammy Award winning artists and helped create countless brands.</p>
                     </div>
                 </div>
             </div>
@@ -163,12 +174,12 @@
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Caleb.jpg" class="cardImg"></img>
+                        <img src="Images/Thea.jpg" class="cardImg"></img>
                         <div class="name">Thea Moon</div>
                         <div class="title">Digital Marketing Specialist</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>BIO and desc and stuff</p>
+                        <p>As a Marketing Coordinator, I’m excited to bring our clients vision to the next level. My experience includes work in public relations, brand strategy, and social media marketing.</p>
                     </div>
                 </div>
             </div>
@@ -177,12 +188,12 @@
         <!-- <video id="video"><source type="video/mp4;" src="Images/xmotion.mp4"></video> -->
         <form id="formBox" action=”mailto:contact@xquisitemarketing.com” method=”POST” enctype=”multipart/form-data” name=”EmailTestForm”>
             <h5>Contact Us</h5>
-            <input placeholder="NAME" type="text" tabindex="1" required autofocus autocomplete="name" class="fillBox1"></input>
-            <input placeholder="EMAIL" type="text" tabindex="1" required autofocus autocomplete="email" class="fillBox2"></input>
-            <input placeholder="PHONE" type="text" tabindex="1" required autofocus autocomplete="tel" class="fillBox3"></input>
-            <input placeholder="SUBJECT" type="text" tabindex="1" required autofocus class="fillBox4"></input>
-            <textarea placeholder="MESSAGE..." type="text" tabindex="1" required autofocus class="fillBox5"></textarea>
-            <input placeholder="SUBMIT" type="Submit" tabindex="1" required autofocus class="fillBox6" value="SUBMIT"></input>
+            <input placeholder="NAME" type="text" tabindex="1" required autocomplete="name" class="fillBox1"></input>
+            <input placeholder="EMAIL" type="text" tabindex="1" required autocomplete="email" class="fillBox2"></input>
+            <input placeholder="PHONE" type="text" tabindex="1" required autocomplete="tel" class="fillBox3"></input>
+            <input placeholder="SUBJECT" type="text" tabindex="1" required class="fillBox4"></input>
+            <textarea placeholder="MESSAGE..." type="text" tabindex="1" required class="fillBox5"></textarea>
+            <input placeholder="SUBMIT" type="Submit" tabindex="1" required class="fillBox6" value="SUBMIT"></input>
         </form>
         <div class="footer">
             <h3 id="footerPosition1">RESOURCES</h3>
@@ -201,12 +212,6 @@
             <p id="footerFont7">470-201-5814</p>
         </div>
     </main>
-    <script src="videoscroll.js"></script>
-    <script src="../bower-components/jquery/dist/jquery.js"></script>
-	<script src="../bower-components/eagle-eye/scripts/eagle-eye.js"></script>
-    <script src="/bower_components/play-on-scroll/scripts/play-on-scroll.js"></script>
-    <script src="../examples/test.js"></script>
-    <script src="cardflip.js"></script>
 </body>
 
 </html>
