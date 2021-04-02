@@ -2,41 +2,62 @@
 <html lang="en">
 
 <head>
-    <script>
-        window.onbeforeunload = function () {
-        window.scrollTo(0, 0);}
-    </script>
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <meta name="author" content="Caleb Faulkner">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <div class="mobile">
-        <img id="bgsrc" src="images/x.png"></img>
-        <p id="mobileText">This site is not optimized for mobile yet. Please visit us on Desktop for now!</p>
-    </div>
+<body >
     <nav class="nav">
-        <ul id="gridNav">
+        <ul class="gridNav">
             <li class="left">BRANDING</li>
             <li class="left">MARKETING</li>
-            <a href="index.html"><img id="logo" src="images/XLogo.png"></img></a>
+            <img id="logo" src="Images/XLogo.png"/>
             <a class="right" href="#team">TEAM</a>
             <a class="right" href="#formBox">CONTACT</a>
         </ul>
+        <div class="mobile_navbar" >
+            <div  style="display: flex; flex-Direction: row;" >
+                <div id="myBtn" class="open" onclick="changeClass('side-drawer.open', 'close', 'open', 'nav.open')" style="height: auto; width: 25px; cursor:pointer">
+                    <div style="background-color:white; height: 3px; width: 23px; margin-bottom: 3px;  " ></div>
+                    <div style="background-color:white; height: 3px; width: 23px; margin-bottom: 3px;" ></div>
+                    <div style="background-color:white; height: 3px; width: 23px; margin-bottom: 3px;" ></div> 
+                </div>
+                <div id="clBtn" class="close" onclick="changeClass('side-drawer','open', 'close', 'nav')" style="height: auto; width: 25px; cursor:pointer; margin-top:-20px;">
+                    <p style="font-size: 40px;">x</p>
+                </div>
+                <div class="logo_div" >
+                    <img class="mobile_logo" src="Images/XLogo.png"/>
+                </div> 
+            </div> 
+            
+        </div>
+        <div class="mobile_navbar" >
+            <div id="myDiv" class="side-drawer">
+                <div style="margin-top:35px; margin-bottom: 20px; " >
+                    <a  href="#" >BRANDING</a>
+                </div>
+                <div style="margin-top:20px; margin-bottom: 20px;" >
+                    <a href="#" >MARKETING</a> 
+                </div>
+                <div style="margin-top:20px; margin-bottom: 20px;" > 
+                    <a href="#team">TEAM</a>
+                </div>
+                <div style="margin-top:20px; margin-bottom: 20px;" >
+                    <a  href="#formBox">CONTACT</a>
+                </div> 
+            </div>
+        </div>
     </nav>
-    <nav class="mobileNav">
-        <ul id="gridNav2">
-            <a href="index.html"><img id="logo" src="images/XLogo.png"></img></a>
-            <img class="ham" src="images/hamburger.svg"></img>
-        </ul>
-    </nav>
-    <main>
+    
+
+    <main class="fullscreen" > 
+        <img id="bgsrcmobile" src="Images/XLogo.png"></img> 
         <div id="gridMain" class="copy">
             <h1>XQUISITE MARKETING</h1>
             <p id="desc" id="typewriter">Providing Marketing Solutions, Creating Brands</p>
-            <a href="about.html"><button class="button" type="submit" >ABOUT US</button></a>
+            <button class="button">ABOUT US</button>
         </div>
         <div class="copy2">
             <h1>BRANDING & DESIGN</h1>
@@ -44,156 +65,226 @@
             <button class="button">GET A QUOTE</button>
         </div>
         <div class="stat">
-            <img id="statImg" src="Images/smiley.png"></img>
+            <img id="statImg" src="Images/smiley.png"/>
             <p class="statpadNumber">106</p>
             <p class="statpad">Happy Clients</p>
         </div>
         <div class="copy3">
             <h1>MARKETING STRATEGY</h1>
-            <p>We create and implement marketing strategies for small to midsize businesses to help them reach a specific target market that in turn will increase brand awareness and sales, and ultimately grow your business.</p>
-            <a href="https://calendly.com/xquisitemarketing/consultation?month=2021-02" target="blank"><button class="button">SCHEDULE CONSULTATION</button></a>
+            <p>We create and implement marketing strategies for small to midsize businesses to help them reach a specific target market that in turn will increase brand awareness, sales, and ultimately grow your business.</p>
+            <button class="button">SCHEDULE CONSULTATION</button>
         </div>
         <div class="stat2">
             <p class="statpadNumber2">65</p>
             <p class="statpad2">Websites Launched</p>
-            <img id="statImg2" src="Images/globe.png"></img>
+            <img id="statImg2" src="Images/Globe.png"/>
         </div>
         <div id="ourWork">
             <ul id="workGrid">
                 <li></li>
                 <h2>OUR WORK</h2>
                 <li></li>
-                <img class="gridImg" src="Images/6FR.jpg"></img>
-                <img class="gridImg" src="Images/AMM.jpg"></img>
-                <img class="gridImg" src="Images/918.jpg"></img>
-                <img class="gridImg" src="Images/ARC.jpg"></img>
-                <img class="gridImg" src="Images/SQAD Dancer Illustration.png"></img>
-                <img class="gridImg" src="Images/MCC.jpg"></img>
+                <img class="gridImg" src="Images/6FR.png" />
+                <img class="gridImg" src="Images/AMM.png"/>
+                <img class="gridImg" src="Images/918.png"/>
+                <img class="gridImg" src="Images/ARC.jpg"/>
+                <img class="gridImg" src="Images/SQAD Dancer Illustration.png"/>
+                <img class="gridImg" src="Images/MCC.png"/>
             </ul>
         </div>
         <div class="stat3">
             <p class="statpadNumber3">185</p>
             <p class="statpad3">Social Campaigns</p>
-            <img id="statImg3" src="Images/Share.png"></img>
+            <img id="statImg3" src="Images/Share.png"/>
         </div>
         <div class="stat4">
-            <img id="statImg4" src="Images/Coffee.png"></img>
+            <img id="statImg4" src="Images/Coffee.png"/>
             <p class="statpadNumber4">1603</p>
             <p class="statpad4">Cups of Coffee</p>
         </div>
         <div id="team">
             <h4>MEET THE TEAM</h4>
         </div>
+
+        <img id='slideRight' class="right-arrow" src="Images/right-arrow.png"  alt="right" style="background-color: #EA1B74;" />
+        <img id='slideLeft' class="left-arrow" src="Images/left-arrow.png"  alt="left" style="background-color: #EA1B74;" />
         <div id="cardGrid">
             <!-- adding style to the card components -->
-            <div class="flipCard">
-                <div class="flipCardInner">
+            <div class="flipCard" >
+                <div class="flipCardInner"  >
                     <div class="flipCardFront">
-                        <img src="Images/TJ.jpg" class="cardImg"></img>
+                        <img src="Images/Finished-min.jpg" class="cardImg"/>
                         <div class="name">Taujuanna Ware</div>
                         <div class="title">National Marketing Director</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>With over 10 years of experience in the marketing industry, I bring insightful knowledge and innovative solutions to the table. As the lead marketing strategist, my job is to provide a plan of action for your business.</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Kera.jpg" class="cardImg"></img>
+                        <img src="Images/Finished-min.jpg" class="cardImg"/>
                         <div class="name">Kera McCain</div>
-                        <div class="title">VP, Digital Marketing</div>
+                        <div class="title">Cool Title</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>I shape profitable business through online marketing, paid social, & strategic partnerships for our clients. 
-                        </p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Anary.jpg" class="cardImg"></img>
-                        <div class="name">Anary Bellamy</div>
-                        <div class="title">Creative Director</div>
+                        <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                        <div class="name">Caleb Faulkner</div>
+                        <div class="title">UX Designer</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>I enjoy helping the team take the ordinary and make it extraordinary.</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Terrell.jpg" class="cardImg"></img>
+                        <img src="Images/Finished-min.jpg" class="cardImg"></img>
                         <div class="name">Terrell Anderson</div>
                         <div class="title">Senior Graphic Designer</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>With over 15 years of graphic and web design experience, I have worked with Grammy Award winning artists and helped create countless brands.</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Daka.jpg" class="cardImg"></img>
-                        <div class="name">Daka David</div>
-                        <div class="title">Cinematographer</div>
+                        <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                        <div class="name">Erik Bello</div>
+                        <div class="title">Brand Photographer</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>I'm an Atlanta based Cinematographer. I'm inspired by my passion for diverse storytelling, and I strive to bring a unique and versatile approach to my projects.</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Caleb.jpg" class="cardImg"></img>
-                        <div class="name">Caleb Faulkner</div>
-                        <div class="title">UX/Visual Designer</div>
+                        <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                        <div class="name">Keira Stewart</div>
+                        <div class="title">Events Manager</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>My goal is to experience and accelerate the progression and advancement of human society through UX Design, Visual Design, and Interaction.</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
             <div class="flipCard">
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Sky.jpg" class="cardImg"></img>
-                        <div class="name">Michael Ajah</div>
-                        <div class="title">Product Designer/Developer</div>
+                        <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                        <div class="name">Emily Hernandez</div>
+                        <div class="title">Social Media Coordinator</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>I'm a product designer and developer with years of experience crafting out digital experiences for companies and building tools that help companies and brands scale faster</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
-            <div class="flipCard">
+            <div class="flipCard" >
                 <div class="flipCardInner">
                     <div class="flipCardFront">
-                        <img src="Images/Thea.jpg" class="cardImg"></img>
-                        <div class="name">Thea Moon</div>
+                        <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                        <div class="name">Thea LASTNAME</div>
                         <div class="title">Digital Marketing Specialist</div>
+                        <div class="back">Creative Designer</div>
                     </div>
                     <div class="flipCardBack">
-                        <p>As a Marketing Coordinator, I’m excited to bring our clients vision to the next level. My experience includes work in public relations, brand strategy, and social media marketing.</p>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/fb.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/ig.png"></a>
+                        <a class="cardIcon" href="#" target="_blank"><img class="cardIcon" src="Images/tt.png"></a>
                     </div>
                 </div>
             </div>
+            <div class="flipCard" style="width: 10px;" ></div>
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Kera McCain</div>
+                <div class="title">Cool Title</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Caleb Faulkner</div>
+                <div class="title">UX Designer</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Terrell Anderson</div>
+                <div class="title">Senior Graphic Designer</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Erik Bello</div>
+                <div class="title">Brand Photographer</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Keira Stewart</div>
+                <div class="title">Events Manager</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Emily Hernandez</div>
+                <div class="title">Social Media Coordinator</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="Images/Finished-min.jpg" class="cardImg"></img>
+                <div class="name">Thea LASTNAME</div>
+                <div class="title">Digital Marketing Specialist</div>
+                <div class="back">Creative Designer</div>
+            </div> -->
         </div>
-        <img id="bgsrc" src="images/x.png"></img>
+        <img id="bgsrc" src="Images/x.png"></img>
         <!-- <video id="video"><source type="video/mp4;" src="Images/xmotion.mp4"></video> -->
         <form id="formBox" action=”mailto:contact@xquisitemarketing.com” method=”POST” enctype=”multipart/form-data” name=”EmailTestForm”>
             <h5>Contact Us</h5>
-            <input placeholder="NAME" type="text" tabindex="1" required autocomplete="name" class="fillBox1"></input>
-            <input placeholder="EMAIL" type="text" tabindex="1" required autocomplete="email" class="fillBox2"></input>
-            <input placeholder="PHONE" type="text" tabindex="1" required autocomplete="tel" class="fillBox3"></input>
-            <input placeholder="SUBJECT" type="text" tabindex="1" required class="fillBox4"></input>
-            <textarea placeholder="MESSAGE..." type="text" tabindex="1" required class="fillBox5"></textarea>
-            <input placeholder="SUBMIT" type="Submit" tabindex="1" required class="fillBox6" value="SUBMIT"></input>
+            <input placeholder="NAME" type="text" tabindex="1" required autofocus autocomplete="name" class="fillBox1"></input>
+            <input placeholder="EMAIL" type="text" tabindex="1" required autofocus autocomplete="email" class="fillBox2"></input>
+            <input placeholder="PHONE" type="text" tabindex="1" required autofocus autocomplete="tel" class="fillBox3"></input>
+            <input placeholder="SUBJECT" type="text" tabindex="1" required autofocus class="fillBox4"></input>
+            <textarea placeholder="MESSAGE..." type="text" tabindex="1" required autofocus class="fillBox5"></textarea>
+            <input placeholder="SUBMIT" type="Submit" tabindex="1" required autofocus class="fillBox6" value="SUBMIT"></input>
+            <!-- <button class="button2">SUBMIT</button> -->
         </form>
         <div class="footer">
             <h3 id="footerPosition1">RESOURCES</h3>
@@ -201,9 +292,14 @@
             <p id="footerFont1">CAREERS</p>
             <p id="footerFont1">PRESS</p>
             <h3 id="footerPosition2">PARTNERS</h3>
-            <a id="footerFont2" href="https://www.facebook.com/groups/devcatlanta" target="blank"><p>FACEBOOK DEVELOPER CIRCLES</p></a>
-            <a id="footerFont3" href="https://www.singlemomnetwork.info/" target="blank"><p>SINGLE MOM NETWORK</p></a>
-            <a id="footerFont4" href="https://amakaware.com/" target="blank"><p>AMAKA WARE</p></a>
+            <p id="footerFont2">FACEBOOK DEVELOPER CIRCLES</p>
+            <p id="footerFont3">SINGLE MOM NETWORK</p>
+            <p id="footerFont4">AMAKA WARE</p>
+            <div class="iconsmobile" >
+                <a href="https://www.facebook.com/xquisitemktng" target="_blank"><img class="footerImg1" src="Images/fb.png"></a>
+                <a href="https://www.instagram.com/xquisitemktng/" target="_blank"><img class="footerImg2" src="Images/ig.png"></a>
+                <a href="https://twitter.com/xquisitemktng/" target="_blank"><img class="footerImg3" src="Images/tt.png"></a>
+            </div> 
             <a class="footerImgA1" href="https://www.facebook.com/xquisitemktng" target="_blank"><img class="footerImg1" src="Images/fb.png"></a>
             <a class="footerImgA2" href="https://www.instagram.com/xquisitemktng/" target="_blank"><img class="footerImg2" src="Images/ig.png"></a>
             <a class="footerImgA3" href="https://twitter.com/xquisitemktng/" target="_blank"><img class="footerImg3" src="Images/tt.png"></a>
@@ -212,6 +308,33 @@
             <p id="footerFont7">470-201-5814</p>
         </div>
     </main>
+
+    <script>
+        function changeClass(value, open, close, nav ){
+            document.getElementById("myDiv").className =value;
+            document.getElementById("myBtn").className =open;
+            document.getElementById("clBtn").className =close;
+        }
+    </script>
+
+    <script>
+        const buttonRight = document.getElementById('slideRight');
+        const buttonLeft = document.getElementById('slideLeft');
+
+        buttonRight.onclick = function () {
+        document.getElementById('cardGrid').scrollLeft += 180;
+        };
+        buttonLeft.onclick = function () {
+        document.getElementById('cardGrid').scrollLeft -= 180;
+        };
+    </script>
+    
+    <script src="videoscroll.js"></script>
+    <script src="../bower-components/jquery/dist/jquery.js"></script>
+	<script src="../bower-components/eagle-eye/scripts/eagle-eye.js"></script>
+    <script src="/bower_components/play-on-scroll/scripts/play-on-scroll.js"></script>
+    <script src="../examples/test.js"></script>
+    <script src="cardflip.js"></script>
 </body>
 
 </html>
